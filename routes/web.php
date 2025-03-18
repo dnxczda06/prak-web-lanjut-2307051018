@@ -20,3 +20,8 @@ Route::get('/', function () {
 
 Route::get('/profile/{nama}/{kelas}/{npm}', [ProfileController::class, 'profile']);
 Route::get('/profile', [ProfileController::class, 'profile']);
+
+Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
+Route::get('/user/create', [\App\Http\Controllers\UserController::class, 'create'])->name('user.create');
+Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
+Route::post('/user/store', [\App\Http\Controllers\UserController::class, 'store'])->name('user.store');
