@@ -28,3 +28,4 @@ Route::post('/user/store', [UserController::class, 'store'])->name('user.store')
 Route::post('/user/store', [\App\Http\Controllers\UserController::class, 'store'])->name('user.store');
 
 Route::get('/user', [UserController::class, 'index'])->name('user');
+Route::get('/user/show/{id}', [UserController::class, 'show'])->name('users.show');
